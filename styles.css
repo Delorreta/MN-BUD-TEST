@@ -9,13 +9,14 @@
 /* Медіа-запити для мобільних пристроїв */
 
 /* Зміни в медіа-запитах для мобільних пристроїв */
-@media (max-width: 400px)
+@media (max-width: 750px)
 {
     .logo h2 {
         font-size: 2px;
+        color: black;
     } 
     .nav a {
-        font-size: 30px;
+        size: 5px;
     }
 }
 /* Об'єднання та виправлення медіа-запитів */
@@ -28,12 +29,9 @@
         padding: 5px 2px;
     }
 .header {
-    font-size: 2px;
+    size: 1px;
 }
-    .logo h2 {
-        font-size: 1px;
-        
-    }
+
 
     .nav-list {
         display: flex;
@@ -54,6 +52,7 @@
         margin-left: 10px;
         margin-bottom: 0;
     }
+
  .hello {
         padding: 10px; /* Зменшення відступів на мобільних пристроях */
         flex-direction: column; /* Вертикальне розташування елементів */
@@ -150,21 +149,44 @@
         font-size: 1.2rem;
     }
 
+/* Стилі для заголовка відгуків */
+.testimonials h2 {
+    font-size: 1.25rem; /* Зменшено з 1.5rem до 1.25rem */
+}
+
+/* Стилі для елементів відгуків */
+.testimonial-item {
+    padding: 10px; /* Зменшено з 15px до 10px */
+}
+
+/* Стилі для тексту в елементах відгуків */
+.testimonial-item p, .testimonial-item h4 {
+    font-size: 0.9rem; /* Зменшено з 1rem до 0.9rem */
+}
+
+/* Стилі для кнопки */
+.oval-button {
+    font-size: 0.9rem; /* Зменшено з 1rem до 0.9rem */
+    padding: 8px 16px; /* Зменшено з 10px 20px до 8px 16px */
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 480px) {
     .testimonials h2 {
-        font-size: 1.5rem;
+        font-size: 0.3rem; /* Зменшено для мобільних пристроїв */
     }
 
     .testimonial-item {
-        padding: 15px;
+        padding: 8px; /* Додаткове зменшення для мобільних */
     }
 
     .testimonial-item p, .testimonial-item h4 {
-        font-size: 1rem;
+        font-size: 0.8rem; /* Зменшено для мобільних */
     }
 
     .oval-button {
-        font-size: 1rem;
-        padding: 10px 20px;
+        font-size: 0.8rem; /* Зменшено для мобільних */
+        padding: 6px 12px; /* Зменшено для мобільних */
     }
 }
 
@@ -207,7 +229,7 @@ body {
 
 /* Стилі для логотипу */
 .logo {
-    font-size: 1.5rem; /* Розмір шрифту */
+    font-size: 2.5rem; /* Розмір шрифту */
     font-weight: bold; /* Жирний шрифт */
 }
 
@@ -216,7 +238,9 @@ body {
 .nav {
     display: flex; /* Використання flexbox для розташування елементів */
 }
-
+.nav a {
+    font-size: 20px;
+}
 /* Стилі для списку меню навігації */
 .nav-list {
     display: flex; /* Використання flexbox для розташування елементів */
@@ -258,80 +282,161 @@ body {
 .nav-link:hover {
     color: orange; /* Зміна кольору тексту при наведенні */
 }
+@media (max-width: 480px) {
+    /* Стилі для шапки на маленьких екранах */
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+    }
 
-/* Контейнер для зображення та тексту */
+    /* Логотип по центру */
+    .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    /* Меню під логотипом в один рядок */
+    .nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .nav-list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-item {
+        margin-left: 5px; /* Зменшені відступи між пунктами меню */
+    }
+
+    .nav-link {
+        font-size: 0.9rem; /* Трохи менший розмір шрифту */
+        color: #fff;
+        text-decoration: none;
+        white-space: nowrap; /* Забороняє перенесення тексту */
+        padding: 5px; /* Зменшені внутрішні відступи */
+    }
+
+    .nav-link:hover {
+        color: orange;
+    }
+}
+
+
+/* Основні стилі для контейнера */
 .hello {
     display: flex; /* Використання Flexbox для розташування елементів */
-    align-items: center; /* Вирівнювання по вертикалі по центру */
-    padding: 20px; /* Відступи навколо контейнера */
-    background-color: #fff; /* Фоновий колір для контейнера */
-    border-radius: 15px; /* Закруглення кутів контейнера */
-    text-align: center; /* Центрування тексту всередині контейнера */
-    flex-direction: column; /* Вертикальне розташування елементів для мобільних пристроїв */
+    align-items: center; /* Вертикальне вирівнювання елементів */
+    margin-bottom: 250px;
+    
+    margin-left: 100px;
 }
 
 /* Стилі для зображення */
 .hello img {
-    width: 300px; /* Зменшення ширини фото для мобільних пристроїв */
+    width: 400px; /* Зменшена ширина зображення */
     height: auto; /* Збереження пропорцій зображення */
-    border-radius: 50%; /* Кругле зображення */
-    border: 2px solid #333; /* Додавання товщини та стилю до обрамлення */
-    margin: 0 auto; /* Центрування зображення */
-    display: block; /* Забезпечення блочного відображення для центрування */
+    border-radius: 360px; /* Заокруглені кути */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Додавання тіні для обрамлення */
+    margin-right: 20px; /* Відступ праворуч для розділення з текстом */
 }
 
-.hello-text {
-    max-width: 400px; /* Максимальна ширина текстового блоку */
-    padding: 20px; /* Внутрішні відступи навколо тексту */
-     /* Легкий фоновий колір для текстового блоку */
-    border-radius: 10px; /* Закруглення кутів текстового блоку */
-    font-size: 1.2rem; /* Розмір шрифту */
-    line-height: 1.8; /* Інтерліньяж для покращення читабельності */
-    text-align: justify; /* Вирівнювання тексту по ширині */
-     font-family: "Open Sans", sans-serif;
-   
-   
+/* Стилі для заголовків */
+.hello-text h1 {
+    color: white; /* Темніший колір заголовку */
+    font-size: 2.5em; /* Збільшений розмір шрифту заголовку */
+    margin-bottom: 10px; /* Відступ знизу для заголовку */
 }
 
-/* Стилі для заголовків всередині текстового блоку */
-.hello-text h2 {
-    color: black; /* Колір заголовку */
-    margin-top: 0; /* Відступ зверху заголовку, щоб не було зайвого простору */
-    margin-bottom: 15px; /* Відступ знизу заголовку для відокремлення від наступного контенту */
-}
-
-/* Стилі для абзаців всередині текстового блоку */
+/* Стилі для тексту */
 .hello-text p {
-    margin: 0 0 15px; /* Відступи для абзаців: знизу для відокремлення від наступного абзацу */
+    margin: 0 0 15px; /* Відступи для абзаців */
+    color: #555; /* Світліший колір тексту */
+    font-size: 1.1em; /* Збільшений шрифт для кращої читабельності */
+}
+
+/* Стилі для таблиці з інформацією */
+.info-table {
+    display: flex; /* Використання Flexbox для горизонтального розташування блоків */
+    justify-content: space-around; /* Рівномірний розподіл блоків */
+    margin-top: 20px; /* Відступ зверху для розділення */
+}
+.icon-web {
+    border-radius: 360\;
+
+
+}
+/* Стилі для окремих блоків */
+.info-box {
+    background-color: white; /* Світлий блакитний фон */
+    color: black; /* Темно-блакитний колір тексту */
+    padding: 20px; /* Внутрішні відступи */
+    margin: 10px; /* Відступи між блоками */
+    border-radius: 10px; /* Заокруглені кути */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Легка тінь для підняття */
+    flex: 1; /* Вирівнювання блоків однакової ширини */
+    max-width: 250px; /* Максимальна ширина для кожного блоку */
+    text-align: center; /* Центрування тексту всередині блоків */
+}
+
+/* Стилі для заголовків всередині блоків */
+.info-box h2 {
+    font-size: 1.5em; /* Збільшений розмір шрифту заголовків в блоках */
+    margin-bottom: 10px; /* Відступ знизу для заголовків */
     color: black;
 }
-.hello-text  {
-    color: black;
-}
-/* Стилі для списків всередині текстового блоку */
-.hello-text ul {
-    padding-left: 20px; /* Відступ для маркерів списку */
+
+/* Стилі для тексту всередині блоків */
+.info-box p {
+    font-size: 1em; /* Зменшений шрифт для тексту в блоках */
 }
 
-.hello-text ul li {
-    margin-bottom: 10px; /* Відступ знизу для кожного елемента списку */
-}
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 480px) {
+    .hello {
+        margin-left: 10px; /* Зменшення відступу зліва */
+        margin-bottom: 20px; /* Зменшення нижнього відступу */
+        flex-direction: column; /* Переключення на вертикальне вирівнювання */
+        align-items: flex-start; /* Вирівнювання елементів по лівому краю */
+    }
 
-/* Стилі для посилань всередині текстового блоку */
-.hello-text a {
-    color: black; /* Колір посилань */
-    text-decoration: none; /* Відсутність підкреслення */
-    transition: color 0.3s; /* Плавна зміна кольору при наведенні */
-}
+    .hello img {
+        width: 100%; /* Ширина зображення на 100% контейнера */
+        max-width: 400px; /* Максимальна ширина зображення */
+        margin-right: 0; /* Прибираємо відступ праворуч */
+        margin-bottom: 10px; /* Зменшений відступ знизу */
+    }
 
-.hello-text a:hover {
-    color: #d63d2e; /* Колір посилання при наведенні */
-}
+    .hello-text h1 {
+        font-size: 1em; /* Зменшення розміру заголовка */
+    }
+ .hello-text h2 {
+    font-size: 0.7em;
+ }
+    .hello-text p {
+        font-size: 0.8em; /* Зменшення шрифту для абзаців */
+    }
 
+    .info-box {
+        height: 200px;
+        max-width: 100px; /* Ширина блоків 100% для маленьких екранів */
+        
+        padding: 15px; /* Зменшені внутрішні відступи */
+    }
+}
 /* Основні стилі для секції */
 .mh-home {
-    position: relative; /* Встановлює позицію як відносну для використання позиціювання елементів всередині */
-    background #f4f4f4; /* Легкий фоновий колір для секції */
+    position: relative;
+    background-colr: #f4f4f4; /* Легкий фоновий колір для секції */
     padding: 50px 0; /* Відступи зверху і знизу секції */
 }
 
@@ -370,6 +475,66 @@ body {
     padding: 20px; /* Внутрішні відступи для контейнера заголовку */
     color: white;
 }
+@media (max-width: 480px) {
+    /* Основні стилі для секції на телефоні */
+    .mh-home {
+        padding: 30px 0; /* Зменшені відступи зверху і знизу */
+    }
+
+    /* Стилі для контейнера */
+    .container {
+        max-width: 100%; /* Контейнер займає всю ширину екрану */
+        padding: 0 10px; /* Менші внутрішні відступи */
+    }
+
+    /* Стилі для ряду */
+    .row {
+        flex-direction: column; /* Елементи розташовані в стовпчик на маленьких екранах */
+        align-items: center; /* Центруємо елементи по горизонталі */
+        margin-bottom: 20px; /* Відступ між рядками */
+    }
+
+    /* Вирівнювання вертикального середнього контенту */
+    .vertical-middle-content {
+        flex-direction: column; /* Вирівнювання по стовпчику */
+        align-items: center; /* Центруємо елементи по горизонталі */
+    }
+
+    /* Відступи для секцій */
+    .section-separator {
+        margin-bottom: 30px; /* Менший відступ знизу секції */
+    }
+
+    /* Відступи для домашньої сторінки */
+    .home-padding {
+        padding: 50px 0; /* Зменшені відступи зверху і знизу для домашньої сторінки */
+    }
+
+    /* Інформація заголовку */
+    .mh-header-info {
+        padding: 10px; /* Зменшені внутрішні відступи */
+        font-size: 0.9rem; /* Зменшений розмір тексту */
+        text-align: center; /* Центруємо текст заголовку */
+    }
+
+    /* Додаткові стилі для тексту і зображень */
+    .hello {
+        display: flex; /* Додаємо flex для вирівнювання */
+        flex-direction: column; /* Вирівнювання зображення та тексту в стовпчик */
+        align-items: center; /* Центруємо по горизонталі */
+        margin-left: 0; /* Відмінити відступ зліва */
+    }
+
+ .hello img {
+    margin-top: 50px;
+        width: 80%; /* Зменшена ширина зображення для мобільних */
+        max-width: 300px; /* Максимальна ширина зображення */
+        margin-bottom: 15px; /* Додати відступ знизу для розділення */
+        display: block; /* Забезпечуємо, що зображення блочне */
+        margin-left: auto; /* Центруємо зображення */
+        margin-right: auto; /* Центруємо зображення */
+    }}
+
 
 /* Стиль для промо */
 .mh-promo span {
@@ -414,7 +579,25 @@ ul li i {
 /* Соціальні іконки */
 .social-icon {
     display: flex; /* Використання Flexbox для розташування соціальних іконок в рядок */
+    justify-content: center; /* Центруємо іконки по горизонталі */
     gap: 15px; /* Пробіл між іконками */
+    flex-wrap: nowrap; /* Забезпечує, що іконки не переходять на новий рядок */
+}
+
+/* Стилі для телефонів */
+@media (max-width: 480px) {
+    .social-icon {
+        flex-direction: row; /* Зберігаємо іконки в одному рядку */
+        justify-content: center; /* Центруємо іконки по горизонталі */
+    }
+
+    .social-icon li {
+        margin: 0 10px; /* Додаємо відступи між іконками */
+    }
+}
+
+.social-icon li {
+    list-style: none; /* Прибираємо маркери списку */
 }
 
 .social-icon li a {
@@ -425,9 +608,7 @@ ul li i {
 
 .social-icon li a:hover {
     color: black; /* Колір іконок при наведенні */
-}
-
-/* Анімація для WOW.js */
+}/* Анімація для WOW.js */
 .wow {
     visibility: hidden; /* Ховає елементи, поки вони не стануть видимими */
 }
@@ -464,6 +645,7 @@ ul li i {
     border: 15px solid white; /* Обрамлення зображення */
     border-radius: 100%; /* Закруглення кутів до кола */
     padding: 15px; /* Внутрішні відступи для обрамлення */
+    margin-left: 300px;
 }
 
 .img-fluid {
@@ -473,6 +655,38 @@ ul li i {
     justify-content: flex-end;
 
 }
+@media (max-width: 480px) {
+    /* Стилі для секції mh-home на телефоні */
+    .mh-home {
+        display: flex; /* Використання Flexbox для вирівнювання елементів */
+        flex-direction: row; /* Розташування в один рядок */
+        align-items: center; /* Вирівнювання по вертикалі */
+        justify-content: center; /* Центрування по горизонталі */
+        padding: 30px 10px; /* Зменшені відступи */
+    }
+
+    /* Вирівнювання зображення по правому краю */
+    .hero-img {
+        margin-left: 20px; /* Відступ зліва для зображення */
+        text-align: right; /* Вирівнювання тексту вправо (необов'язково) */
+    }
+
+    .img-border {
+        margin: 0; /* Вимкнення відступу зліва */
+    }
+
+    .img-fluid {
+        max-width: 150px; /* Зменшення максимальної ширини зображення для мобільних */
+        height: auto; /* Автоматичне встановлення висоти */
+        border-radius: 100%; /* Закруглення кутів до кола */
+    }
+
+    /* Додаткові стилі для тексту, якщо потрібно */
+    .mh-header-info {
+        font-size: 0.9rem; /* Зменшення розміру шрифту для заголовків */
+    }
+}
+
 /*Grafik*/
 .mh-skills {
     padding: 50px 0;
@@ -632,43 +846,176 @@ ul li i {
 /* Стилі для мобільних пристроїв */
 
 /* Загальний стиль для секції відгуків */
+/* Стилі для секції відгуків */
 .testimonials {
-    padding: 50px 0;
-   
+    padding: 60px 0; /* Відступи зверху та знизу */
+    background: linear-gradient(to right, #4B79A1, #283E51); /* Градієнтний фон */
+    color: #fff; /* Колір тексту */
+    position: relative; /* Відносне позиціонування для розміщення псевдоелементів */
+    overflow: hidden; /* Приховати надлишок вмісту */
 }
 
+/* Пульсуючий ефект для фону */
+
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /* Початковий та кінцевий масштаб */
+    }
+    50% {
+        transform: scale(1.2); /* Масштаб під час середини анімації */
+    }
+}
+
+/* Стилі для контейнера */
 .testimonials .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    max-width: 1200px; /* Максимальна ширина контейнера */
+    margin: 0 auto; /* Вирівнювання по центру */
+    padding: 0 15px; /* Відступи зліва та справа */
+    position: relative; /* Відносне позиціонування */
+    z-index: 1; /* Встановлення шару поверх псевдоелементів */
 }
 
+/* Стилі для заголовка */
 .testimonials h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: white;
+    text-align: center; /* Вирівнювання тексту по центру */
+    font-size: 3rem; /* Розмір шрифту */
+    margin-bottom: 50px; /* Відступ знизу */
+    color: #fff; /* Колір тексту */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Тінь для тексту */
 }
 
+/* Стилі для каруселі відгуків */
+.testimonial-carousel {
+    position: relative; /* Відносне позиціонування для розміщення стрілок */
+}
+
+/* Стилі для кожного відгуку */
 .testimonial-item {
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    padding: 30px; /* Відступи всередині блоку */
+    background: rgba(255, 255, 255, 0.9); /* Напівпрозорий білий фон */
+    border-radius: 60px; /* Округлі краї */
+      text-align: center; /* Вирівнювання тексту по центру */
+    transition: transform 0.6s ease; /* Плавна анімація при наведенні */
 }
 
+/* Ефект при наведенні на відгук */
+.testimonial-item:hover {
+    transform: translateY(-10px); /* Зміщення блоку вверх */
+}
+
+/* Стилі для тексту відгуків */
 .testimonial-item p {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-bottom: 20px;
-    color: #555;
+    font-size: 1.4rem; /* Розмір шрифту */
+    font-style: italic; /* Курсивний шрифт */
+    margin-bottom: 20px; /* Відступ знизу */
+    color: #333; /* Колір тексту */
 }
 
+/* Стилі для імені автора відгуку */
 .testimonial-item h4 {
-    font-size: 1.1rem;
-    font-weight: bold;
+    font-size: 1.2rem; /* Розмір шрифту */
+    font-weight: bold; /* Напівжирний шрифт */
+    color: #555; /* Колір тексту */
+}
+
+/* Стилі для стрілок каруселі */
+.slick-prev, .slick-next {
+    font-size: 0; /* Вимкнення розміру шрифту для кнопки */
+    line-height: 0; /* Вимкнення висоти рядка */
+    position: absolute; /* Абсолютне позиціонування */
+    top: 50%; /* Розташування посередині по вертикалі */
+    transform: translateY(-50%); /* Центрування по вертикалі */
+    display: block; /* Блоковий елемент */
+    width: 30px; /* Ширина кнопки */
+    height: 30px; /* Висота кнопки */
+    border: none; /* Без рамки */
+    background: rgba(255, 255, 255, 0.5); /* Напівпрозорий білий фон */
+    color: transparent; /* Прозорий текст */
+    cursor: pointer; /* Курсор у вигляді руки */
+    border-radius: 50%; /* Округлі краї */
+    z-index: 2; /* Встановлення шару поверх інших елементів */
+    transition: background 0.3s ease; /* Плавна зміна фону при наведенні */
+}
+
+/* Ефект при наведенні на стрілки */
+.slick-prev:hover, .slick-next:hover {
+    background: rgba(255, 255, 255, 0.8); /* Зміна фону при наведенні */
+}
+
+/* Вміст стрілок */
+.slick-prev::before, .slick-next::before {
+    font-size: 20px; /* Розмір шрифту для іконок */
+    line-height: 30px; /* Висота рядка для іконок */
+    color: #333; /* Колір іконок */
+    font-family: 'FontAwesome'; /* Використання FontAwesome для іконок */
+}
+
+/* Розташування лівої стрілки */
+.slick-prev {
+    left: -40px; /* Відступ зліва */
+}
+
+/* Розташування правої стрілки */
+.slick-next {
+    right: -40px; /* Відступ справа */
+}
+
+/* Іконка для лівої стрілки */
+.slick-prev::before {
+    content: '\f053'; /* FontAwesome іконка для лівої стрілки */
+}
+
+/* Іконка для правої стрілки */
+.slick-next::before {
+    content: '\f054'; /* FontAwesome іконка для правої стрілки */
+}
+
+
+/* Slick arrows */
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+    transition: background 0.3s ease;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.slick-prev::before, .slick-next::before {
+    font-size: 20px;
+    line-height: 30px;
     color: #333;
+    font-family: 'FontAwesome';
+}
+
+.slick-prev {
+    left: -40px;
+}
+
+.slick-next {
+    right: -40px;
+}
+
+.slick-prev::before {
+    content: '\f053'; /* FontAwesome left arrow */
+}
+
+.slick-next::before {
+    content: '\f054'; /* FontAwesome right arrow */
 }
 
 .slick-dots {
@@ -788,11 +1135,12 @@ ul li i {
 
 /* Заголовок вакансії */
 .vacancy-title {
-    background-color: #007bff;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 10px;
     text-align: center;
     font-size: 1.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 /* Контент вакансії */
@@ -813,28 +1161,209 @@ ul li i {
     flex-direction: column;
     gap: 10px;
 }
+.vacancy-details h3 {
+    font-size: 20px;
+}
 
 /* Зарплата вакансії */
 .vacancy-salary {
     font-size: 1.2em;
     color: #28a745;
 }
-
+.vacancy-salary h3 {
+    font-size: 20px;
+}
 /* Опис вакансії */
 .vacancy-description {
     font-size: 1em;
     color: #333;
 }
-
-
-footer {
-    max-width: 100%;
-    height: 100px;
-    color: white;
-     background: linear-gradient(to right, #4B79A1, #283E51);
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-
+.vacancy-description h3 {
+    font-size: 20px;
 }
-footer h1 {
+
+.footer {
+    background: #000;
+    padding: 30px 0;
+    font-family: 'Play', sans-serif;
     text-align: center;
+    width: 100vw; /* Забезпечує, що фон футера буде займати всю ширину екрану */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw; /* Вирівнює футер по центру */
+    margin-right: -50vw; /* Забезпечує рівномірне розташування фону */
 }
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0;
+    padding: 0.6% 0;
+    color: gray;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .row ul li {
+    margin: 0 15px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0 15px;
+}
+
+@media (max-width: 720px) {
+    .footer {
+        text-align: left;
+        padding: 5%;
+    }
+    
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
+    
+    .footer .row a i {
+        margin: 0% 3%;
+    }
+}
+
+/* Загальні стилі для секції статистики */
+.stats {
+    padding: 30px 0;
+    background: linear-gradient(to right, #4B79A1, #283E51);
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Контейнер для розміщення кіл */
+.stats .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Стилі для кожного кола */
+.circle {
+    margin: 10px;
+}
+
+/* Заголовки над колами */
+.circle h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Контейнер для кола */
+.circle-content {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+/* SVG коло для фону */
+.progress-circle {
+    transform: rotate(-90deg); /* Поворот на 90 градусів для початку анімації зверху */
+}
+
+/* Стилі для фону кола */
+.progress-bg {
+    fill: none;
+    stroke: skyblue;
+    stroke-width: 10;
+}
+
+/* Стилі для заповнення кола */
+.progress {
+    fill: none;
+    stroke: white;
+    stroke-width: 10;
+    stroke-dasharray: 440; /* Довжина кола (2 * π * радіус) */
+    stroke-dashoffset: 440; /* Початкова позиція для анімації */
+    transition: stroke-dashoffset 2s ease;
+}
+
+/* Стилі для тексту відсотків всередині кола */
+.circle-content .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:white ;
+}
+/* Медіа-запит для пристроїв з шириною менше 480px */
+@media (max-width: 480px) {
+    .stats .container {
+        flex-direction: column; /* Розміщення елементів в стовпчик на маленьких екранах */
+        align-items: center; /* Центруємо елементи по горизонталі */
+    }
+
+    .circle {
+        margin: 20px 0; /* Додатковий відступ зверху і знизу для кіл */
+    }
+
+    .circle-content {
+        width: 120px; /* Зменшена ширина кола для мобільних */
+        height: 120px; /* Зменшена висота кола для мобільних */
+    }
+
+    .circle h3 {
+        font-size: 1.2rem; /* Зменшений розмір заголовків для мобільних */
+    }
+
+    .circle-content .percentage {
+        font-size: 1.2rem; /* Зменшений розмір тексту відсотків для мобільних */
+    }
+}
+.video { 
+ justify-content: center;
+ display: flex;
+ margin-top: 50px;
+ color: white;
+
+
+ }
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 480px) {
+    .video {
+        flex-direction: column; /* Розташування елементів у стовпчик */
+        align-items: center; /* Центрування вмісту */
+        margin-top: 30px; /* Зменшений верхній відступ */
+        width: 100%; /* Ширина відеопрогравача на всю ширину */
+
+    }
+
+    video { /* Адаптація самого відео */
+        max-width: 100%; /* Максимальна ширина відео - 100% від контейнера */
+        height: auto; /* Автоматичне встановлення висоти для збереження пропорцій */
+    }
+}
+  .click {
+  
+             /* Відсутність підкреслення у тексту (наприклад, для посилань) */
+}
+ 
